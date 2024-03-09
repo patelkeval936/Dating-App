@@ -1,0 +1,23 @@
+{
+  "question" : "What is your favorite time of the day?",
+  "answer" : "Mine is definitely the peace in the morning",
+  "options": [
+    {
+      "option" : "A",
+      "text" : "The peace in the early morning"
+    },
+    {
+      "option" : "B",
+      "text" : "The magical golden hours"
+    },
+    {
+      "option" : "C",
+      "text" : "Wind-down time after dinners"
+    },
+    {
+      "option" : "D",
+      "text" : "The serenity past midnight"
+    }
+  ]
+
+}

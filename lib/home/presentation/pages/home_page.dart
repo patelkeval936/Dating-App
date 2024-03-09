@@ -15,17 +15,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  late Image backgroundImage;
+
+  @override
+  void initState() {
+    super.initState();
+    backgroundImage = Image.asset(AppAssets.bgImage);
+  }
+
+  //precaching background image which is present in asset images
+  //for network image we can use CachedNetworkImage()
+  @override
+  void didChangeDependencies() {
+    precacheImage(backgroundImage.image, context);
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         height: context.screenHeight,
         width: context.screenWidth,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-                AppAssets.bgImage,
-              ),
+              image: backgroundImage.image,
               fit: BoxFit.cover),
         ),
         child: Stack(

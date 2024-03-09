@@ -24,6 +24,7 @@ class _ProfileHeaderState extends State<ProfileHeader> {
      cacheHeight: 100,
       cacheWidth: 100,
     );
+
   }
 
   //precaching background image which is present in asset images

@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stroll_social_assignment/utils/app_styles.dart';
 
-class Subtitle extends StatelessWidget {
-  const Subtitle({super.key, required this.leadingIcon, required this.text});
+class HeadingSubtitle extends StatelessWidget {
+  const HeadingSubtitle(
+      {super.key, required this.leadingIcon, required this.text});
 
   final String leadingIcon;
   final String text;
@@ -11,6 +12,7 @@ class Subtitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         SvgPicture.asset(
           leadingIcon,
@@ -21,9 +23,8 @@ class Subtitle extends StatelessWidget {
           width: 4,
         ),
         Text(
-         text,
-          style: const TextStyle(
-              fontSize: 12, fontWeight: FontWeight.w600),
+          text,
+          style: AppStyles.headerSubtitleStyle,
         ),
       ],
     );

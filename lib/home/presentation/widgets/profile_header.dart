@@ -20,7 +20,11 @@ class _ProfileHeaderState extends State<ProfileHeader> {
   @override
   void initState() {
     super.initState();
-    profilePic = Image.asset(AppAssets.profilePicImage);
+    profilePic = Image.asset(AppAssets.profilePicImage,
+     cacheHeight: 100,
+      cacheWidth: 100,
+    );
+
   }
 
   //precaching background image which is present in asset images

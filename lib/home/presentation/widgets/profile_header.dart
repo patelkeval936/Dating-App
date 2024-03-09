@@ -5,8 +5,30 @@ import 'package:stroll_social_assignment/home/presentation/bloc/user_bloc/user_b
 import 'package:stroll_social_assignment/home/presentation/bloc/user_bloc/user_bloc_state.dart';
 import 'package:stroll_social_assignment/utils/app_styles.dart';
 
-class ProfileHeader extends StatelessWidget {
+import '../../../utils/app_assets.dart';
+
+class ProfileHeader extends StatefulWidget {
   const ProfileHeader({super.key});
+
+  @override
+  State<ProfileHeader> createState() => _ProfileHeaderState();
+}
+
+class _ProfileHeaderState extends State<ProfileHeader> {
+  late Image profilePic;
+
+  @override
+  void initState() {
+    super.initState();
+    profilePic = Image.asset(AppAssets.profilePicImage);
+  }
+
+  //precaching background image which is present in asset images
+  @override
+  void didChangeDependencies() {
+    precacheImage(profilePic.image, context);
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +80,13 @@ class ProfileHeader extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
-                      child: Image.asset(
-                        state.userInfo?.url ?? '',
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                        borderRadius: BorderRadius.circular(25),
+                        child: Image(
+                          image: profilePic.image,
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.cover,
+                        )),
                   ),
                 ),
               ),

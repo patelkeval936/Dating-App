@@ -16,11 +16,11 @@ class UserBloc extends Bloc<UserBlocEvents, UserBlocState> {
   }
 
   void onGetUserData(UserBlocEvents event, Emitter<UserBlocState> emit) async {
-    final articles = await getUser(const Params(AppAssets.userJson));
-    if (articles.error == null) {
-      emit(UserSuccess(articles.data));
+    final user = await getUser(const Params(AppAssets.userJson));
+    if (user.error == null) {
+      emit(UserSuccess(user.data));
     } else {
-      emit(UserFailed(articles.error?.message ?? AppStrings.somethingWentWrong));
+      emit(UserFailed(user.error?.message ?? AppStrings.somethingWentWrong));
     }
   }
 }

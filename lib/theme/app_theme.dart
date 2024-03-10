@@ -12,6 +12,7 @@ class AppTheme {
 
   static ThemeData get dark {
     return ThemeData(
+      fontFamily: 'ProximaNova',
       useMaterial3: false,
       colorScheme: ColorScheme.fromSeed(
         brightness: Brightness.dark,

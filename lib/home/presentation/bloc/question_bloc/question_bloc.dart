@@ -17,12 +17,12 @@ class QuestionBloc extends Bloc<QuestionBlocEvents, QuestionBlocState> {
 
   void onGetQuestionData(
       QuestionBlocEvents event, Emitter<QuestionBlocState> emit) async {
-    final articles = await getQuestion(const Params(AppAssets.questionJson));
+    final question = await getQuestion(const Params(AppAssets.questionJson));
 
-    if (articles.error == null) {
-      emit(QuestionSuccess(articles.data));
+    if (question.error == null) {
+      emit(QuestionSuccess(question.data));
     } else {
-      emit(QuestionFailed(articles.error?.message ?? AppStrings.somethingWentWrong));
+      emit(QuestionFailed(question.error?.message ?? AppStrings.somethingWentWrong));
     }
   }
 }

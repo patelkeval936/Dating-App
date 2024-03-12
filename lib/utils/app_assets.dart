@@ -12,6 +12,8 @@ class AppAssets{
   static const micIcon = 'assets/icons/mic.svg';
   static const swipeCardsIcon = 'assets/icons/swipe_cards_icon.svg';
   static const arrowDownIcon = 'assets/icons/arrow_down.svg';
+  static const playIcon = 'assets/icons/play_icon.svg';
+  static const pauseIcon = 'assets/icons/pause_icon.svg';
 
   //json
   static const headerJson = 'assets/data/header_data.json';

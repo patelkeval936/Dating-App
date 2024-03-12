@@ -9,4 +9,8 @@ class AppStrings{
   static const match = "Match";
   static const chat = "Chat";
   static const profile = "Profile";
+  static const delete = "Delete";
+  static const submit = "Submit";
+  static const unmatch = "Unmatch";
+  static const strollQuestion = "Stroll Question";
 }

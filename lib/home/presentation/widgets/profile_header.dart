@@ -21,8 +21,8 @@ class _ProfileHeaderState extends State<ProfileHeader> {
   void initState() {
     super.initState();
     profilePic = Image.asset(AppAssets.profilePicImage,
-      cacheHeight: 100,
-      cacheWidth: 100,
+      cacheHeight: 400,
+      cacheWidth: 400,
     );
   }
 

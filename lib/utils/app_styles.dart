@@ -21,6 +21,18 @@ class AppStyles {
     color: AppColors.optionWhite,
   );
 
+  static const enabledButtonTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    color: AppColors.optionWhite,
+  );
+
+  static const disabledButtonTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    color: AppColors.disabledBlack,
+  );
+
   static const profileHeaderTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 11,
@@ -65,6 +77,21 @@ class AppStyles {
         color: AppColors.darkShadowColor.withOpacity(0.5),
         offset: const Offset(0, 1),
         blurRadius: 2,
+      ),
+    ],
+  );
+
+  static TextStyle nameHeaderTextStyle = const TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.w700,
+    fontSize: 18,
+    height: 1.25,
+
+    shadows: [
+      Shadow(
+        color: AppColors.lightShadow,
+        offset: Offset(0, 1.08),
+        blurRadius: 1.08,
       ),
     ],
   );

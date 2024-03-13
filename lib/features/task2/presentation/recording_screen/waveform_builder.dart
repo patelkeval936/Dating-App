@@ -28,17 +28,37 @@ class _WaveFormBuilderState extends State<WaveFormBuilder> {
   int currentlyPlayedTime = 0;
   int timeToFillColorInSingleBar = 0;
 
+  void _insertAt0(){
+
+    if(waveforms.isNotEmpty){
+      if(waveforms[0] != -1){
+        waveforms.insert(0, -1);
+      }
+    }else{
+      waveforms.insert(0, -1);
+    }
+  }
+
+  @override
+  void initState() {
+    _insertAt0();
+    super.initState();
+  }
+
   @override
   void didUpdateWidget(covariant WaveFormBuilder oldWidget) {
     waveforms.clear();
     waveforms.addAll(widget.state.waveformValues);
-    waveforms.insert(0, -1);
 
-    timeToFillColorInSingleBar =
-        ((widget.state.recordedTime / waveforms.length) * 1000).toInt();
+    _insertAt0();
+
+    if(waveforms.isNotEmpty){
+      timeToFillColorInSingleBar =
+          ((widget.state.recordedTime / waveforms.length) * 1000).toInt();
+    }
 
     isPlaying = widget.state.isPlaying;
-    isPlaying = widget.state.isRecording;
+    isRecording = widget.state.isRecording;
     currentlyPlayedTime = widget.state.playedTime;
 
     super.didUpdateWidget(oldWidget);
@@ -63,6 +83,7 @@ class _WaveFormBuilderState extends State<WaveFormBuilder> {
 
   @override
   Widget build(BuildContext context) {
+
     return SizedBox(
       height: 20,
       width: context.screenWidth,

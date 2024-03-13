@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stroll_social_assignment/features/task2/presentation/recording_screen/recorder_cta.dart';
+import 'package:stroll_social_assignment/features/task2/presentation/widget/recorder_cta.dart';
 import '../../../../utils/app_strings.dart';
 import '../recorder_bloc/recorder_bloc.dart';
 import 'action_text_button.dart';

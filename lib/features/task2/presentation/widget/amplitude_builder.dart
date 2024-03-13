@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:record/record.dart';
 import 'package:stroll_social_assignment/core/extensions/build_context_extensions.dart';
-import 'package:stroll_social_assignment/features/task2/presentation/recording_screen/waveform_builder.dart';
+import 'package:stroll_social_assignment/features/task2/presentation/widget/waveform_builder.dart';
 import 'package:stroll_social_assignment/utils/app_constants.dart';
 
 import '../recorder_bloc/recorder_bloc.dart';

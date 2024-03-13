@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stroll_social_assignment/features/task2/presentation/recording_screen/recorder_action_buttons.dart';
-import 'package:stroll_social_assignment/features/task2/presentation/recording_screen/recorder_progress_text.dart';
+import 'package:stroll_social_assignment/features/task2/presentation/widget/recorder_action_buttons.dart';
+import 'package:stroll_social_assignment/features/task2/presentation/widget/recorder_progress_text.dart';
 import '../recorder_bloc/recorder_bloc.dart';
 import 'amplitude_builder.dart';
 

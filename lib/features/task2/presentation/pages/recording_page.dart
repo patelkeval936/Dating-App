@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:stroll_social_assignment/core/extensions/build_context_extensions.dart';
 import 'package:stroll_social_assignment/utils/app_assets.dart';
-import '../recording_screen/app_progress_bar.dart';
-import '../recording_screen/name_header.dart';
-import '../recording_screen/profile_question.dart';
-import '../recording_screen/recorder_widget.dart';
-import '../recording_screen/recording_gradient.dart';
-import '../recording_screen/recording_profile_header.dart';
+import '../widget/app_progress_bar.dart';
+import '../widget/name_header.dart';
+import '../widget/profile_question.dart';
+import '../widget/recorder_widget.dart';
+import '../widget/recording_gradient.dart';
+import '../widget/recording_profile_header.dart';
 
 class RecordingPage extends StatefulWidget {
   const RecordingPage({super.key});
@@ -83,7 +83,7 @@ class _RecordingPageState extends State<RecordingPage> with SingleTickerProvider
                         const Spacer(),
                         SlideTransition(
                           position: _positionAnimation,
-                          child:  const Column(
+                          child: const Column(
                             children: [
                               RecordingProfileHeader(),
                               ProfileQuestion(),

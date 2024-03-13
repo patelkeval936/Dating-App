@@ -1,23 +1,30 @@
 
 import 'package:flutter/material.dart';
+import 'package:stroll_social_assignment/utils/app_colors.dart';
+import 'package:stroll_social_assignment/utils/app_constants.dart';
 
 class AppTheme {
   static ThemeData get light {
     return ThemeData(
+      fontFamily: AppConstants.proximaNova,
+      useMaterial3: false,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color(0xFF13B9FF),
+        seedColor: AppColors.primaryColor,
       ),
     );
   }
 
   static ThemeData get dark {
     return ThemeData(
-      fontFamily: 'ProximaNova',
+      fontFamily: AppConstants.proximaNova,
       useMaterial3: false,
       colorScheme: ColorScheme.fromSeed(
         brightness: Brightness.dark,
-        seedColor: const Color(0xff8B88EF),
+        seedColor: AppColors.primaryColor,
       ),
+      appBarTheme: const AppBarTheme(
+        color: AppColors.primaryColor
+      )
     );
   }
 }

@@ -1,4 +1,5 @@
 # stroll_social_assignment
+<img width="434" alt="Screenshot 2024-03-13 at 5 29 50 AM" src="https://github.com/patelkeval936/stroll_social_assignment/assets/68424914/1d053e4f-4fb5-483c-a538-d77ddd5c3bd4">
 
 <img width="424" alt="Screenshot 2024-03-10 at 3 54 47 AM" src="https://github.com/patelkeval936/stroll_social_assignment/assets/68424914/7d055852-3847-42da-9a7e-26907eab7c52">
 

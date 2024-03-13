@@ -13,4 +13,6 @@ class AppStrings{
   static const submit = "Submit";
   static const unmatch = "Unmatch";
   static const strollQuestion = "Stroll Question";
+  static const task1 = "Task 1";
+  static const task2 = "Task 2";
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stroll_social_assignment/features/task3/presentation/bloc/bottom_nav/bottom_nav_cubit.dart';
+import 'package:stroll_social_assignment/features/task3/presentation/bloc/gesture/gesture_cubit.dart';
+import 'package:stroll_social_assignment/features/task3/presentation/bloc/user/user_bloc.dart';
 import 'package:stroll_social_assignment/task_redirector.dart';
 import 'package:stroll_social_assignment/theme/app_theme.dart';
 import 'package:stroll_social_assignment/utils/app_strings.dart';
@@ -14,6 +17,8 @@ import 'package:stroll_social_assignment/features/task1/presentation/bloc/user_b
     as user_bloc_event;
 import 'features/task1/presentation/bloc/header_bloc/header_bloc_event.dart'
     as header_bloc_event;
+import 'features/task3/presentation/bloc/user/user_event.dart'
+    as users_info_bloc_event;
 import 'injection_container.dart';
 
 class MyApp extends StatelessWidget {
@@ -33,29 +38,40 @@ class MyApp extends StatelessWidget {
     _setSystemProperties();
 
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (_) => sl<UserBloc>()..add(const user_bloc_event.GetData()),
-          ),
-          BlocProvider(
-            create: (_) =>
-                sl<QuestionBloc>()..add(const question_bloc_event.GetData()),
-          ),
-          BlocProvider(
-            create: (_) =>
-                sl<HeaderBloc>()..add(const header_bloc_event.GetData()),
-          ),
-          BlocProvider(
-            create: (_) => sl<RecorderBloc>(),
-          ),
-        ],
-        child: MaterialApp(
-          title: AppStrings.appName,
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.light,
-          darkTheme: AppTheme.dark,
-          themeMode: ThemeMode.dark,
-          home: const TaskRedirector(),
-        ));
+      providers: [
+        BlocProvider(
+          create: (_) => sl<UserBloc>()..add(const user_bloc_event.GetData()),
+        ),
+        BlocProvider(
+          create: (_) =>
+              sl<QuestionBloc>()..add(const question_bloc_event.GetData()),
+        ),
+        BlocProvider(
+          create: (_) =>
+              sl<HeaderBloc>()..add(const header_bloc_event.GetData()),
+        ),
+        BlocProvider(
+          create: (_) =>
+              sl<UsersInfoBloc>()..add(const users_info_bloc_event.GetData()),
+        ),
+        BlocProvider(
+          create: (_) => sl<RecorderBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => sl<GestureCubit>(),
+        ),
+        BlocProvider(
+          create: (_) => sl<BottomNavCubit>(),
+        ),
+      ],
+      child: MaterialApp(
+        title: AppStrings.appName,
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
+        themeMode: ThemeMode.dark,
+        home: const TaskRedirector(),
+      ),
+    );
   }
 }

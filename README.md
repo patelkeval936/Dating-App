@@ -5,7 +5,8 @@
 
 ### For Video:
 * Used better_player plugin for showing video
-* Added caching of video, initially it will cache around 2 MB and but total caching is capped at 1GB  &  can be changed 
+* Added caching of video
+* initially it will cache around 2 MB & but total caching is capped at 1GB  &  can be changed 
 * to show background video as soon as user taps
 * Video will also be cached while user is seeing it, to fetch video next time From Cache instead of network
 
@@ -13,18 +14,15 @@
 * Used Gesture Detector and based on its input of how much user has dragged over screen, updating the position of video and other ui elements
 
 ### Other :
-* if video supports HLS (http live streaming), then video quality can be changed depending on user internet connection
+* if video supports HLS (http live streaming), then video quality can be changed depending on user internet connection (eg. 480p->720p etc... and vice-versa)
 * Commented link in code can be used to check HLS functionality
 
 ### Optimisation: 
-* can use CloudFront CDN instead of Firebase (where current video is hosted) to achieve event lesser initial loading & caching time
+* can use CloudFront CDN instead of Firebase (where current video is hosted) to achieve lesser initial loading & caching time
 
 ### Video Specification tested:
 * Mp4
 * HLS videos
-
-### video size
-* can support 4k videos : as only initial frames will be fetched & loaded on screen first and downloading and caching of video happens on first screen of few MBs
 
 ### Packages Used:
 better_player

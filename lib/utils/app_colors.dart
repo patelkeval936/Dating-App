@@ -15,6 +15,7 @@ class AppColors {
   static const badgeBackgroundColor = Color(0xffB5B2FF);
   static const lightShadow = Color(0x0000004D);
   static const borderBlack = Color(0xff0F1115);
+  static const profileBorder = Color(0xff262338);
   static const disabledBlack = Color(0xffffffff);
   static const greyColor = Color(0xff232A2E);
   static const darkGreyColor = Color(0xff121518);

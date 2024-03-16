@@ -19,5 +19,6 @@ class AppAssets{
   static const headerJson = 'assets/data/header_data.json';
   static const questionJson = 'assets/data/question_data.json';
   static const userJson = 'assets/data/user_data.json';
+  static const nearByUsersJson = 'assets/data/near_by_users.json';
 
 }

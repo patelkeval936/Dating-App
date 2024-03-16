@@ -96,6 +96,7 @@ class AppStyles {
     ],
   );
 
+  static TextStyle iconTextStyle = const TextStyle(fontSize: 24);
 
   //box decorations
 

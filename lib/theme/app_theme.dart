@@ -24,6 +24,12 @@ class AppTheme {
       ),
       appBarTheme: const AppBarTheme(
         color: AppColors.primaryColor
+      ),
+      bottomAppBarTheme: const BottomAppBarTheme(
+        color: Colors.transparent
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: Colors.transparent
       )
     );
   }

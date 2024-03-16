@@ -23,6 +23,7 @@ dependencies:
   path_provider:
   audioplayers: ^5.2.1
   pausable_timer: ^3.1.0+3
+  better_player: ^0.0.83
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +38,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/data/
+    - assets/videos/
 
   fonts:
     - family: ProximaNova

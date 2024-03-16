@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stroll_social_assignment/utils/app_styles.dart';
-
 import '../../../task1/presentation/bloc/user_bloc/user_bloc.dart';
 import '../../../task1/presentation/bloc/user_bloc/user_bloc_state.dart';
 
 class NameHeader extends StatelessWidget {
-  const NameHeader({super.key});
+  const NameHeader({super.key, this.title, this.showEndIcon = true});
+
+  final String? title;
+  final bool showEndIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -28,24 +30,37 @@ class NameHeader extends StatelessWidget {
                         splashRadius: 15,
                         iconSize: 20,
                         color: Colors.white,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
                         icon: const Icon(Icons.arrow_back_ios_new)),
                   ),
-                  Center(
-                    child: Text(
-                      "${state.userInfo!.name}, ${state.userInfo!.age}",
-                      style: AppStyles.nameHeaderTextStyle,
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Text(
+                        title ??
+                            "${state.userInfo!.name}, ${state.userInfo!.age}",
+                        style: AppStyles.nameHeaderTextStyle.copyWith(
+                            overflow: TextOverflow.ellipsis,
+                            fontSize: title != null ? 16 : 18),
+                      ),
                     ),
                   ),
-                  Material(
-                      color: Colors.transparent,
-                      child: IconButton(
-                          padding: EdgeInsets.zero,
-                          splashRadius: 15,
-                          iconSize: 20,
-                          onPressed: () {},
-                          color: Colors.white,
-                          icon: const Icon(Icons.more_horiz_rounded))),
+                  showEndIcon
+                      ? Material(
+                          color: Colors.transparent,
+                          child: IconButton(
+                              padding: EdgeInsets.zero,
+                              splashRadius: 15,
+                              iconSize: 20,
+                              onPressed: () {},
+                              color: Colors.white,
+                              icon: const Icon(Icons.more_horiz_rounded)))
+                      : const SizedBox(
+                          height: 30,
+                          width: 30,
+                        ),
                 ],
               ),
             ),

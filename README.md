@@ -1,6 +1,5 @@
-# stroll_social_assignment
+# stroll_social
 
-## Task 3 
 ### Approach:
 
 ### For Video:

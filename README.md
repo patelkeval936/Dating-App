@@ -1,4 +1,4 @@
-# stroll_social
+# Dating App
 
 ### Approach:
 

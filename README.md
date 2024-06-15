@@ -27,8 +27,6 @@
 better_player
 
 
-https://github.com/patelkeval936/stroll_social_assignment/assets/68424914/e30d0048-f209-45d4-9be5-18aaecacdf7d
-
 
 ________________
 
